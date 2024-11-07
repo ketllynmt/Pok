@@ -1,0 +1,197 @@
+/* Estilo do corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #04070e, #658acb);
+}
+
+/* Ajuste do main para garantir que o conteúdo seja exibido sem cortar */
+main {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilo da navbar */
+.navbar {
+    width: 100%;
+    padding: 0;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.navbar-nav .nav-link:hover {
+    color: rgb(255, 234, 0) !important;
+}
+
+/* Centraliza o conteúdo do header */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Estilo da logo no header */
+.header-logo {
+    max-width: 25vw;
+}
+
+/* Estilo do footer */
+footer {
+    width: 100%;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer .container-fluid {
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+/* Estilo do container */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o conteúdo do main */
+h2 {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    color: #e0e0e0;
+    margin-left: 20px;
+}
+
+/* Estilo para a imagem do Ash */
+.ash-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+.img-ash {
+    max-width: 90px;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 370px) {
+    .header-logo {
+        max-width: 35vw; 
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    
+    p {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+
+    .navbar {
+        min-height: 45px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .ash-container {
+        justify-content: right;
+        margin-top: 15px;
+    }
+
+    .img-ash {
+        max-width: 70px;
+    }
+}
+
+/* Media query para tablets (600px para cima) */
+@media screen and (min-width: 600px) {
+    .header-logo {
+        max-width: 30vw; 
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .navbar {
+        min-height: 50px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .img-ash {
+        max-width: 80px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .header-logo {
+        max-width: 20vw; 
+    }
+
+    h2 {
+        font-size: 28px; 
+        margin-top: 30px; 
+    }
+
+    p {
+        font-size: 18px; 
+        line-height: 1.8; 
+    }
+
+    .navbar {
+        min-height: 5px; 
+        padding: 5px; 
+    }
+
+    .container {
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 40px; 
+    }
+
+    .ash-container {
+        justify-content: right; 
+        margin-top: 40px; 
+    }
+
+    .img-ash {
+        max-width: 120px; 
+    }
+}

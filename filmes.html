@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes Pokémon</title>
+    <link rel="icon" type="image/x-icon" href="src/assets/images/Poké_Ball_icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/filmes.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="src/imagem/1.png" alt="Pokebola" style="height: 30px; margin-right: 8px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pokedex.html">Pokedex</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historia.html">História</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="filmes.html">Desenho / Filmes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Logo -->
+        <div class="header-content text-center my-4">
+            <img class="header-logo" src="src/assets/images/pokemon-title.svg" alt="Logo Pokemon" style="max-width: 100%; height: auto;">
+        </div>
+    </header>
+
+   <!-- Conteúdo Principal -->
+    <main class="container-fluid">
+        <div class="row">
+           <!-- Conteúdo de Texto -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center" style="background-color: black; color: white; padding: 20px;">
+                <div class="legenda text-center">
+                    <h3 id="titulo-digital"></h3>
+                    <p>Prepare-se para uma jornada incrível pelo universo Pokémon! Os filmes trazem histórias emocionantes que encantam jovens e adultos, repletas de desafios, combates e lições sobre amizade, coragem e perseverança. Além das batalhas, eles promovem reflexão sobre laços fortes e respeito à vida.</p>
+                    <p>Os desenhos animados complementam essa experiência, seguindo Ash Ketchum e seus amigos em aventuras por diversas regiões, capturando Pokémon e enfrentando desafios. Juntos, filmes e desenhos criam um universo rico, perfeito para cada fã viver suas próprias histórias de Pokémon!</p>
+                    <h5>Clique no botão abaixo para assistir à primeira temporada.</h5>
+                    <a href="https://www.youtube.com/watch?v=SSViT336Vq4&list=PL5Yff77BRE_rJQkYlaIOYVOgJv1jRr9d2" class="btn btn-warning mt-3">Assista Temp.I</a>
+                </div>
+            </div>
+            
+            <!-- Conteúdo de Vídeo -->
+            <div class="col-md-6">
+                <div class="video-container">
+                    <video autoplay muted loop class="img-fluid" style="width: 100%; height: auto;">
+                        <source src="src/imagem/2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <!-- Seção de Filmes -->
+        <div class="container mt-5">
+            <h2 id="titulo-filmes" class="text-center mb-4"></h2>
+            <div class="row">
+                <!-- Card do filme1 -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="src/imagem/filme1.jpg" class="card-img-top" alt="Filme 1">
+                        <div class="card-body text-center">
+                            <span class="lancamento bg-warning">Lançamento</span> 
+                            <a href="https://www.youtube.com/watch?v=Cfc5Lljs1WM&t=12s" class="card-title stretched-link">Pokémon, o Filme: Mewtwo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--  Card do filme 2 -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="src/imagem/filme2.jpg" class="card-img-top" alt="Filme 2">
+                        <div class="card-body text-center">
+                            <span class="lancamento bg-warning">Lançamento</span> 
+                            <a href="https://www.youtube.com/watch?v=cmAqgmuJGXw" class="card-title stretched-link">Pokémon 2000: O Poder de Um</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card do filme 3 -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="src/imagem/3filme.jpg" class="card-img-top" alt="Filme 3">
+                        <div class="card-body text-center">
+                            <span class="lancamento bg-warning">Lançamento</span> 
+                            <a href="https://www.youtube.com/watch?v=Db8S-YzIs7I&t=18s" class="card-title stretched-link">Pokémon 3: O Feitiço dos Unown</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card do filme 4 -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="src/imagem/filme4.jpg" class="card-img-top" alt="Filme 4">
+                        <div class="card-body text-center">
+                            <span class="lancamento bg-warning">Lançamento</span> 
+                            <a href="https://www.youtube.com/watch?v=RJyXi-ZyWqo" class="card-title stretched-link">Pokémon 4: Viajantes do Tempo</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2024 Ketllyn Motta & Lucas Rodrigues | Todos os direitos reservados</p>
+            <img src="src/imagem/3.png" alt="Pokémons" class="img-fluid" style="max-width: 110px; margin-top: 10px;">
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Script para Efeito de Máquina de Escrever -->
+    <script>
+        // Título "Descubra o Mundo Mágico . ."
+        const titulo = "Descubra o Mundo Mágico . ."; 
+        let index = 0; 
+        const speed = 130; 
+
+        function typeWriter() {
+            if (index < titulo.length) {
+                document.getElementById("titulo-digital").innerHTML += titulo.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // Título "Assista os filmes..."
+        const filmesTitulo = "Assista os filmes...";
+        let filmesIndex = 0;
+
+        function typeWriterFilmes() {
+            if (filmesIndex < filmesTitulo.length) {
+                document.getElementById("titulo-filmes").innerHTML += filmesTitulo.charAt(filmesIndex);
+                filmesIndex++;
+                setTimeout(typeWriterFilmes, speed);
+            }
+        }
+
+        // Executar ambas as animações de texto
+        window.onload = function() {
+            typeWriter();
+            typeWriterFilmes();
+        };
+    </script>
+</body>
+</html>

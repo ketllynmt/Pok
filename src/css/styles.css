@@ -1,0 +1,354 @@
+/* Ajuste do main para garantir que o conteúdo seja exibido sem cortar */
+main {
+    min-height: calc(100vh - 160px);
+    padding: 20px;
+}
+
+/* Estilo do corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    font-family: Arial, sans-serif;
+    background-image: url('../imagem/1p.jpg');
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para os cards */
+.card {
+    background-color: #f1efd6f3;
+    color: #040404;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.747);  
+}
+
+
+/* Estilo da navbar */
+.navbar {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Ajuste do container de cards para ficar alinhado */
+.wrapper-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Ajuste da barra de pesquisa para centralizá-la */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* Input da pesquisa */
+#pokemon-search {
+    max-width: 250px;
+
+    width: 100%;
+    padding: 7px;
+    border-radius: 15px;
+    border: 1px solid #102983;
+    font-size: 1rem;
+    flex: 1;
+}
+
+/* Botão de busca */
+#search-button {
+    padding: 7px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 0 0 100px;
+}
+
+/* Efeito de hover no botão de busca */
+#search-button:hover {
+    background-color: #0a3fec;
+}
+
+/* Espaçamento inferior no header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilo da logo no header */
+.header-logo {
+    max-width: 25vw;
+}
+
+/* Estilo do overlay do modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(179, 131, 97, 0.596);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background:#e0e0e0f3;
+    padding: 20px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    color: #040404;
+    text-align:center;
+}
+
+/* Botão de fechar o modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* Estilo para os botões de evolução */
+#prev-evolution, #next-evolution {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.747);  
+
+}
+
+/* Cor de fundo padrão e efeito hover para o botão de evolução anterior */
+#prev-evolution {
+    background-color: #4A90E2;
+    color: white;
+}
+
+#prev-evolution:hover {
+    background-color: #eea060;
+}
+
+/* Cor de fundo padrão e efeito hover para o botão de próxima evolução */
+#next-evolution {
+    background-color: #4A90E2;
+    color: white;
+}
+
+#next-evolution:hover {
+    background-color: #eea060;
+}
+
+/* Estilo para botão desativado */
+#next-evolution:disabled, #prev-evolution:disabled {
+    background-color: #ccccccde;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* Estilo para a imagem dentro do modal */
+.pokemon-image img {
+    width: 50%; 
+    height: auto;
+    max-width: 180px; 
+    border-radius: 200%; 
+    margin-bottom: 20px; 
+}
+.estatistica-tabela {
+    border: 2px solid #86868657; 
+    padding: 10px; 
+    border-radius: 20px; 
+    background-color: #f8f8f89f; 
+    margin-top: 10px; 
+}
+
+.estatistica-tabela h4 {
+    margin-top: 0; 
+    margin-bottom: 5px; 
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.estatistica-tabela table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+.estatistica-tabela th, .estatistica-tabela td {
+    padding: 6px; 
+    text-align: left; 
+    border-bottom: 1px solid #e4e4e4c0; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.estatistica-tabela th {
+    background-color: #e0e0e0a8; 
+    font-weight: bold; 
+}
+
+/* Estilo do footer */
+footer {
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Estilo da cor dos card quando passa mouse por cima */
+
+.card.fire:hover {
+    background-color: #f08030;
+}
+
+.card.water:hover {
+    background-color: #6890f0;
+}
+
+.card.grass:hover {
+    background-color: #78c850;
+}
+
+.card.electric:hover {
+    background-color: #f8d030;
+}
+
+.card.psychic:hover {
+    background-color: #f85888;
+}
+
+.card.ice:hover {
+    background-color: #98d8d8;
+}
+
+.card.dragon:hover {
+    background-color: #7038f8;
+}
+
+.card.dark:hover {
+    background-color: #705848;
+}
+
+.card.fairy:hover {
+    background-color: #ee99ac;
+}
+
+.card.ghost:hover {
+    background-color: #705898;
+}
+
+.card.steel:hover {
+    background-color: #b8b8d0;
+}
+
+.card.poison:hover {
+    background-color: #a040a0;
+}
+
+.card.rock:hover {
+    background-color: #b8a038;
+}
+
+.card.flying:hover {
+    background-color: #a890f0;
+}
+
+.card.bug:hover {
+    background-color: #a8b820;
+}
+
+.card.fighting:hover {
+    background-color: #c03028;
+}
+
+.card.normal:hover {
+    background-color: #a8a878;
+}
+
+.card.ground:hover {
+    background-color: #e0c068;
+}
+
+
+/* Ajustes para telas extremamente pequenas (menos que 300px) */
+@media (min-width: 325px) and (max-width: 600px){
+    .header-logo {
+        max-width: 50vw;
+    }
+
+    main {
+        min-height: calc(100vh - 140px);
+        padding: 10px;
+    }
+
+    .navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .wrapper-content {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .search-container {
+        gap: 5px;
+    }
+
+    #pokemon-search {
+        max-width: 200px;
+    }
+
+    #search-button {
+        flex: 0 0 80px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .pokemon-image img {
+        width: 70%;
+        max-width: 150px;
+    }
+
+    #prev-evolution, #next-evolution {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+

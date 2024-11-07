@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+    <link rel="icon" type="image/x-icon" href="src/assets/images/Poké_Ball_icon.svg">
+
+    <!-- Carrega o CSS do Bootstrap através de uma CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- Carrega o CSS -->
+    <link rel="stylesheet" href="src/css/home.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="src/imagem/1.png" alt="Pokebola" style="height: 30px; margin-right: 8px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pokedex.html">Pokedex</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historia.html">História</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="filmes.html">Desenho / Filmes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-content text-center my-4">
+            <img class="header-logo" src="src/assets/images/pokemon-title.svg" alt="Logo Pokemon" style="max-width: 100%; height: auto;">
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center justify-content-center" style="background-color: black; color: white; padding: 20px;">
+                <div class="legenda">
+                    <h3 id="titulo-digital"></h3>
+                    <p>
+                        Desperte o <span class="color-p">verdadeiro treinador</span> que reside em seu interior! Sinta a emoção pulsar em suas veias enquanto mergulha em um vasto e fascinante acervo de cartas, cada uma delas guardando não apenas estratégias, mas também histórias que ecoam nas memórias de batalhas épicas. 
+                        <span class="color-p">Explore as narrativas intrincadas de Pokémon</span>, onde criaturas magníficas e seus treinadores enfrentam desafios que vão além da imaginação, conectando corações através das gerações. Reviva momentos inesquecíveis com nossos desenhos e filmes, repletos de aventuras que inspiram e despertam <span class="color-p">coragem</span> e determinação em você. Sua jornada épica começa agora uma jornada cheia de <span class="color-p">descobertas fascinantes</span> e emoções. 
+                      
+                    </p>
+                    
+                    
+                    <a href="pokedex.html" class="btn btn-warning">Pokedex</a>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="image-container">
+                    <img src="src/imagem/as1.jpg" alt="Imagem Pokémon" class="img-fluid">
+                </div>
+            </div>       
+        </div>
+    </main>
+
+    <footer>
+        <footer class="bg-dark text-white text-center p-3">
+            <div class="container-fluid">
+                <p class="mb-0">© 2024 Ketllyn Motta & Lucas Rodrigues | Todos os direitos reservados</p>
+                <img src="src/imagem/3.png" alt="Pokémons" class="img-fluid" style="max-width: 110px; margin-top: 10px;">
+            </div>
+        </footer>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
