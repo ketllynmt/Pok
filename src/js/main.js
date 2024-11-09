@@ -28,35 +28,80 @@ const typeColors = {
     ground: '#e0c068'
 };
 
+// Função para mostrar o overlay de carregamento
+function showLoadingOverlay() {
+    const loadingOverlay = document.getElementById("loading-overlay");
+    loadingOverlay.style.display = "flex";
+}
+
+// Função para ocultar o overlay de carregamento
+function hideLoadingOverlay() {
+    const loadingOverlay = document.getElementById("loading-overlay");
+    loadingOverlay.style.display = "none";
+}
+
 // Função para carregar Pokémon por página
 async function loadPokemons(page = 1) {
+    showLoadingOverlay(); // Mostra o overlay de carregamento antes de começar a carregar
+
     const pokemonsPerPage = 18;
     const offset = (page - 1) * pokemonsPerPage;
     const url = `https://pokeapi.co/api/v2/pokemon?limit=${pokemonsPerPage}&offset=${offset}`;
 
-    const response = await fetch(url);
-    const { results } = await response.json();
+    // Volta ao topo da página quando mudar a página
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    // Elemento onde os Pokémon serão exibidos
     const pokemonList = document.getElementById("pokemon-list");
     pokemonList.innerHTML = "";
 
-    for (let i = 0; i < results.length; i++) {
-        const pokemon = results[i];
-        const pokemonId = offset + i + 1;
+    const loadingStartTime = Date.now(); // Marca o tempo de início do carregamento
 
-        const pokemonDataResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
-        const pokemonData = await pokemonDataResponse.json();
-        const mainType = pokemonData.types[0].type.name;
+    try {
+        // Requisição para obter a lista de Pokémon
+        const response = await fetch(url);
+        const { results } = await response.json();
 
-        // Passa o tipo principal para createCard
-        createCard(pokemon, pokemonId, mainType);
+        // Laço para obter os detalhes de cada Pokémon
+        for (let i = 0; i < results.length; i++) {
+            const pokemon = results[i];
+            const pokemonId = offset + i + 1;
+
+            const pokemonDataResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+            const pokemonData = await pokemonDataResponse.json();
+            const mainType = pokemonData.types[0].type.name;
+
+            // Passa o tipo principal para createCard
+            createCard(pokemon, pokemonId, mainType);
+        }
+    } catch (error) {
+        // Mostra uma mensagem de erro em caso de falha na requisição
+        pokemonList.innerHTML = "<p>Erro ao carregar os Pokémon. Tente novamente.</p>";
+    } finally {
+        // Certifica-se de que o overlay seja exibido por pelo menos 2 segundos
+        const elapsedTime = Date.now() - loadingStartTime;
+        const remainingTime = Math.max(1000 - elapsedTime, 0); // Garante pelo menos 2 segundos
+
+        setTimeout(() => {
+            hideLoadingOverlay(); // Oculta o overlay de carregamento após o tempo restante
+        }, remainingTime);
     }
 
+    // Atualiza a página atual
     currentPage = page;
     updatePagination();
 }
 
-await loadPokemons();
+// Adicione um evento para trocar de página que chama o overlay de carregamento
+document.querySelectorAll(".pagination-button").forEach(button => {
+    button.addEventListener("click", () => {
+        currentPage = parseInt(button.getAttribute("data-page"));
+        loadPokemons(currentPage);
+    });
+});
+
+// Carregar a primeira página de Pokémon
+loadPokemons();
 
 // Atualiza a paginação
 function updatePagination() {
@@ -96,6 +141,8 @@ function createPaginationButton(label, onClick) {
     button.addEventListener("click", onClick);
     return button;
 }
+
+
 
 // Função para buscar um Pokémon específico
 async function searchPokemon(query) {

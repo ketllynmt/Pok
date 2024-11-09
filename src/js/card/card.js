@@ -52,12 +52,13 @@ export async function createCard(pokemon, index, mainType) {
         card.style.width = '18rem';
 
         card.innerHTML = `
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png" class="card-img-top" alt="${capitalizedPokemonName}">
-            <div class="card-body">
-                <h5 class="card-title" style="text-align: center;">${capitalizedPokemonName}</h5>
-                <p class="card-text">${description}</p>
-            </div>
-        `;
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png" class="card-img-top" alt="${capitalizedPokemonName}">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;"><strong>${capitalizedPokemonName}</strong></h5>
+            <p class="card-text">${description}</p>
+        </div>
+    `;
+    
 
         const verMaisButton = document.createElement('button');
         verMaisButton.innerText = 'Ver mais';

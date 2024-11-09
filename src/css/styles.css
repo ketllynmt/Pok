@@ -4,6 +4,9 @@ main {
     padding: 20px;
 }
 
+
+
+
 /* Estilo do corpo da página */
 body {
     display: flex;
@@ -221,6 +224,30 @@ footer {
     width: 100%;
     font-size: 14px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Estilos para o overlay de carregamento */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Ocultar por padrão */
+}
+
+.loading-message {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /*Estilo da cor dos card quando passa mouse por cima */
