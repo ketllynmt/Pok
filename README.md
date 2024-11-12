@@ -13,4 +13,4 @@ Efeito de digitação (typewriter) para um toque interativo na apresentação do
 HTML5 para a estruturação do conteúdo.
 CSS3 para estilização da página.
 Bootstrap 5 para tornar o site responsivo e facilitar a construção do layout.
-JavaScript (apenas para o efeito de digitação do título).
+JavaScript usado no site também para algumas animações.
