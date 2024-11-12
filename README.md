@@ -4,7 +4,7 @@ Este é um projeto  HTML e CSS que explora a história do universo Pokémon. O s
 # Funcionalidades
 Navbar com links para outras seções do site, como "Home", "Pokedex", "História" e "Desenho / Filmes".
 Conteúdo detalhado sobre a história de Pokémon, desde o início e suas gerações que foram se renovando.
-Imagens e vídeos que ilustram a história do Pokémon e suas cartainhas.
+Imagens e vídeos que ilustram a história do Pokémon e suas cartinhas.
 Design responsivo usando Bootstrap, adaptando o layout para diferentes tamanhos de tela.
 Efeito de digitação (typewriter) para um toque interativo na apresentação do título.
 
